@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Serif Display';
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #171f29 !important;
+}
+/* Navbar */
+.navbar{
+    background-color: rgba(23, 31, 41, 0.8);
+    position: fixed;
+    transition: 0.6s;
+    box-shadow: 0 3px 4px rgba(29, 11, 11, 0.349);
+}
+.navbar-brand{
+    font-family: 'Noto Serif Display';
+    color: #ffffff !important;
+    font-size: 42px;    
+    padding-left: 30px;
+    text-shadow: 0 0 5px rgb(89, 89, 89), 0 0 10px #fff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px;
+}
+.nav-link{
+    margin-left: 30px;
+    font-family: 'Noto Serif Display';
+    color: #fff !important;
+    text-align: center;
+}
+
+.nav-link:hover{
+    text-shadow: 0 0 5px rgb(89, 89, 89), 0 0 10px #fff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px;
+}
+
+.navbar-toggler{
+    margin-right: 10px;
+}
+
+.sticky{
+    box-shadow: 0 3px 4px rgba(29, 11, 11, 0.349);
+}
+/* Akhir Navbar */
+
+/* Section Parallax */
+.kiminonawa{
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.kiminonawa img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.kiminonawa::after{
+    content:'';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0,0,0,0));
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+}
+
+#landing{
+    height: 100vh;
+}
+
+#landing h1{
+    position: absolute;
+    z-index: 5;
+    top: 25%;
+    left: 0px;
+    font-size: 100px;
+    color: #547090;
+    text-align: center;
+    letter-spacing: 10px;
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate{
+    0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%
+    {
+        opacity: 0.8;
+        color: #ffffff;
+        box-shadow: none;
+    }
+    18.1%,20.1%,30%,50%,60.1%,65.1%,80.1%,90%,92.1%,100%
+    {
+        color: #fff;
+        text-shadow: 0 0 10px #ffffff,
+        0 0 20px #03bcf4,
+        0 0 30px #03bcf4,
+        0 0 40px #03bcf4,
+        0 0 160px #03bcf4;
+    }
+}
+
+.rumah{
+    z-index: 8;
+}
+
+.makoto{
+    z-index: 7;
+}
+.pager{
+    z-index: 6;
+}
+.gedung{
+    z-index: 4;
+}
+.bulan{
+    z-index: 3;
+    mix-blend-mode: screen;
+    transform: translateY(350px);
+}
+
+#landing::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to top, #171f29,transparent);
+    z-index: 12;
+
+}
+
+/* Content */
+
+#yourname{
+    margin-top: -40px;
+    padding: 100px 0;
+    line-height: 50px;
+    color: #fff;
+    background-color: #171f29;
+}
+
+.content{
+    text-align: center;
+    margin-bottom: -65px;
+
+}
+
+/* Footer */
+.footer{
+    margin-top:50px;
+    background-color: #171f29;
+    width: 100%;
+
+}
+.footer p{
+    color: #acacac;
+    font-size: 18px;
+    margin-left: 40px;
+}
+
+@media (min-width: 992px) {
+    .navbar{
+        background-color: transparent;
+        position: fixed;
+        transition: 0.6s;
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+    .navbar .navbar-brand{
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+        font-size: 28px;
+        color: #ffffff !important;
+        text-shadow: 0 0 5px rgb(89, 89, 89), 0 0 10px #fff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff, 0 0 50px #ffffff, 0 0 60px #ffffff;
+    }
+    .navbar-brand,.nav-link{
+        color: white !important;
+        text-shadow: 1px 1px 1px rgba(0,0,0,0);
+    }
+    .nav-link{
+        margin-right: 20px;
+        text-shadow: 1px 1px 1px black !important;
+
+    }
+    .nav-link:hover::after{
+        content:'';
+        display: flex;
+        border-bottom: 1px solid #6F5BBC;
+        box-shadow:  0 0 10px #ffffff,
+        0 0 20px #6F5BBC,
+        0 0 30px #6F5BBC,
+        0 0 40px #6F5BBC,
+        0 0 160px #6F5BBC;
+        width: 50%;
+        margin: auto;
+        padding-bottom: 5px ;
+        margin-bottom:-8px;
+    }
+    .sticky{
+        padding: 10px 50px;
+        background: #547090,0.5;
+        box-shadow: 0 3px 15px rgba(29, 11, 11,0.8);
+        text-shadow: none;
+
+        
+    }
+    #landing h1{
+        position: absolute;
+        z-index: 5;
+        top: 25%;
+        left: 280px;
+        font-size: 100px;
+        color: #547090;
+        text-align: center;
+        letter-spacing: 10px;
+        animation: animate 5s linear infinite;
+    }
+
+}
